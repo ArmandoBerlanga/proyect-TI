@@ -69,7 +69,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     background-color: $primario;
-    padding: 1rem 3rem;
+    padding: 1rem 2.5%;
 
     img {
         width: 10rem;
