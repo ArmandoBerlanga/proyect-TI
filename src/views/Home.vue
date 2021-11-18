@@ -136,6 +136,15 @@ export default {
     }
 }
 
+.lista-maestros{
+    margin: 0;
+    padding: 2.5%;
+    background-color: $primario;
+    h2{
+        color: white;
+    }
+}
+
 @media screen and (max-width: 1000px) {
     .sec-beneficios .beneficios{
         grid-template-columns: 1fr 1fr 1fr;
