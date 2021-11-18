@@ -1,30 +1,114 @@
 <template>
-  <div id="nav">
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </div>
-  <router-view/>
+<div id="app">
+
+    <nav>
+        <img src="@/assets/logo.png" alt="logo">
+
+        <ul class="lista hide">
+            <li><a href="#">INICIO</a></li>
+            <li><a href="#">CLASES</a></li>
+            <li><a href="#">MAESTROS</a></li>
+            <li><a href="#">INCIAR SESIÓN</a></li>
+            <li><button class="secundario">REGISTRATE</button></li>
+        </ul>
+
+        <Menu class="menu" />
+    </nav>
+
+    <main>
+        <router-view />
+    </main>
+
+    <aside></aside>
+
+    <footer></footer>
+
+</div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Menu from '@/components/Menu.vue'
+import {
+    reactive
+} from '@vue/reactivity'
 
-#nav {
-  padding: 30px;
+export default {
+    name: 'App',
+    components: {
+        Menu
+    },
+    setup() {
 
-  a {
-    font-weight: bold;
-    color: #2c3e50;
+        const state = reactive({
 
-    &.router-link-exact-active {
-      color: #42b983;
+        });
+
+        return {
+            state
+        }
     }
-  }
 }
+</script>
+
+<style lang="scss">
+@import '@/styles/__variables.scss';
+@import '@/styles/botones.scss';
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,h2,h3{
+    color: $primario;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: $primario;
+    padding: 1rem 3rem;
+
+    img {
+        width: 10rem;
+        height: 70%;
+    }
+
+    .lista {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        color: white;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+    }
+}
+
+main{
+    background-color: $secundario;
+}
+
+footer{
+    background-color: $primario;
+}
+
+@media screen and (min-width: 700px) {
+    nav .menu{
+        display: none !important;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    nav .hide{
+        display: none !important;
+    }
+}
+
 </style>

@@ -1,0 +1,29 @@
+@import '@/styles/__variables.scss';
+$box-shadow: 0 0 10px rgba(128, 128, 128, 0.548);
+$box-shadow-activa: 0 0 10px #f0a10270;
+button {
+    background-color: $primario;
+    border: 0;
+    height: 2rem;
+    padding: 0 1rem;
+    transition: transform 250ms;
+    color: white;
+    font-weight: bold;
+    &:hover {
+        transform: scale(1.02, 1.02);
+        box-shadow: $box-shadow;
+        cursor: pointer;
+    }
+    &:active {
+        box-shadow: $box-shadow-activa;
+    }
+}
+
+.secundario {
+    background-color: $secundario;
+    color: $primario;
+}
+
+.cta {
+    background-color: $amarillo;
+}
