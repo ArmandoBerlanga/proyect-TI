@@ -5,9 +5,9 @@
         <img src="@/assets/logo.png" alt="logo">
 
         <ul class="lista hide">
-            <li><a href="#">INICIO</a></li>
-            <li><a href="#">CLASES</a></li>
-            <li><a href="#">MAESTROS</a></li>
+            <li><a href="#app">INICIO</a></li>
+            <li><a href="#clases">CLASES</a></li>
+            <li><a href="#maestros">MAESTROS</a></li>
             <li><a href="#">INCIAR SESIÓN</a></li>
             <li><button class="secundario">REGISTRATE</button></li>
         </ul>
@@ -19,9 +19,30 @@
         <router-view />
     </main>
 
-    <aside></aside>
+    <footer>
 
-    <footer></footer>
+        <section class="first">
+
+            <div class="info">
+                <p>© Copyright 2021. </p>
+                <p>Este website utiliza cookies. Para rechazar o conocer más, visite nuestra página de Política de Cookies.</p>
+            </div>
+
+            <div class="icons">
+
+                <img src="@/assets/social_media/facebook.png" alt="">
+                <img src="@/assets/social_media/insta.png" alt="">
+                <img src="@/assets/social_media/whatsapp.png" alt="">
+
+             </div>
+
+        </section>
+
+        <div class="linea"></div>
+
+
+
+    </footer>
 
 </div>
 </template>
@@ -36,8 +57,10 @@ export default {
     name: 'App',
     components: {
         Menu
-    },
+    },    
     setup() {
+
+        document.title = "Landing Indigo";
 
         const state = reactive({
 
@@ -61,7 +84,9 @@ export default {
     box-sizing: border-box;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     color: $primario;
 }
 
@@ -92,24 +117,59 @@ nav {
     }
 }
 
-main{
+main {
     background-color: $secundario;
 }
 
-footer{
+footer {
+    display: flex;
+    flex-flow: column wrap;
+    color: white;
+    padding: 2rem;
     background-color: $primario;
+
+    .first{
+        display: flex;
+        justify-content: space-between;
+        gap: 0.7rem;
+
+        .icons{
+            display: flex;
+            gap: 0.35rem;
+            img{
+                width: 2.5rem;
+                height: 2.5rem;
+                filter: invert(100%);
+                border-radius: 50%;
+                transition: transform 750ms ease;
+
+                &:hover{
+                    transform: scale(1.02, 1.02);
+                    box-shadow: 0 0 10px rgba(128, 128, 128, 0.548);
+                }
+            }
+        }
+    }
+
+    .linea {
+        align-self: center;
+        align-items: c;
+        background-color: white;
+        width: 80%;
+        height: 0.08rem;
+        margin-top: 2rem;
+    }
 }
 
 @media screen and (min-width: 700px) {
-    nav .menu{
+    nav .menu {
         display: none !important;
     }
 }
 
 @media screen and (max-width: 700px) {
-    nav .hide{
+    nav .hide {
         display: none !important;
     }
 }
-
 </style>

@@ -8,11 +8,11 @@
         <div>
             <div>
                 <ul>
-                    <li><router-link to="/" @click="cerrarMenu()">Inicio</router-link></li>
-                    <li><router-link to="/" @click="cerrarMenu()">Mi información</router-link></li>
-                    <li><router-link to="/" @click="cerrarMenu()">Cambiar cuenta</router-link></li>
-                    <li><router-link to="/" @click="cerrarMenu()">Configuración</router-link></li>
-                    <li><a href="/" @click="logOut()">Cerrar sesión</a></li>
+                    <li><a href="#app" @click="cerrarMenu()">INICIO</a></li>
+                    <li><a href="#clases" @click="cerrarMenu()">CLASES</a></li>
+                    <li><a href="#maestros" @click="cerrarMenu()">MAESTROS</a></li>
+                    <li><a href="/" @click="cerrarMenu()">INCIAR SESIÓN</a></li>
+                    <li><a href="#registro" @click="logOut()">REGISTRATE</a></li>
                 </ul>
             </div>
         </div>
