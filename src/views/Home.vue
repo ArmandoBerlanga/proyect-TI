@@ -4,17 +4,17 @@
         <img src="@/assets/banner.png" class="banner" />
 
         <a href="#forms">
-            <button class="cta">¡Empieza Hoy!</button>
+            <button class="cta">¡EMPIEZA HOY!</button>
         </a>
     </div>
 
-    <section class="sec-beneficios contenedor">
+    <section class="sec-clases contenedor">
 
-        <h2>¿Que beneficos tengo al ser parte de INDIGO?</h2>
+        <h2>NUESTRAS CLASES</h2>
 
-        <div class="beneficios">
+        <div class="clases">
 
-            <div class="beneficio">
+            <div class="clase">
                 <img src="@/assets/stock/s1.jpeg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
                     culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
@@ -23,7 +23,7 @@
                 </p>
             </div>
 
-            <div class="beneficio">
+            <div class="clase">
                 <img src="@/assets/stock/s1.jpeg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
                     culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
@@ -32,7 +32,7 @@
                 </p>
             </div>
 
-            <div class="beneficio">
+            <div class="clase">
                 <img src="@/assets/stock/s1.jpeg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
                     culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
@@ -41,7 +41,7 @@
                 </p>
             </div>
 
-            <div class="beneficio">
+            <div class="clase">
                 <img src="@/assets/stock/s1.jpeg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
                     culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
@@ -50,7 +50,7 @@
                 </p>
             </div>
 
-            <div v-if="state.masBeneficos" class="beneficio">
+            <div v-if="state.masBeneficos" class="clase">
                 <img src="@/assets/stock/s1.jpeg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
                     culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
@@ -59,7 +59,7 @@
                 </p>
             </div>
 
-            <div v-if="state.masBeneficos" class="beneficio">
+            <div v-if="state.masBeneficos" class="clase">
                 <img src="@/assets/stock/s1.jpeg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
                     culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
@@ -68,7 +68,7 @@
                 </p>
             </div>
 
-            <div v-if="state.masBeneficos" class="beneficio">
+            <div v-if="state.masBeneficos" class="clase">
                 <img src="@/assets/stock/s1.jpeg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
                     culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
@@ -77,7 +77,7 @@
                 </p>
             </div>
 
-            <div v-if="state.masBeneficos" class="beneficio">
+            <div v-if="state.masBeneficos" class="clase">
                 <img src="@/assets/stock/s1.jpeg" alt="">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
                     culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
@@ -94,7 +94,7 @@
 
     <section class="lista-maestros contenedor">
 
-        <h2>Consulta nuestra lista de maestros</h2>
+        <h2>TUS MAESTROS</h2>
 
         <div class="maestros">
 
@@ -132,57 +132,25 @@
 
     </section>
 
-    <section id="forms" class="registrate contenedor">
-
-        <h2>Registrate HOY</h2>
-
-        <div class="wrapper">
-            <img class="cover" src="@/assets/stock/s1.jpeg" alt="">
-
-            <form class="form-holder">
-                <div class="datos nombres">
-                    <div class="cuadro">
-                        <img src="@/assets/name.svg" alt="">
-                    </div>
-                    <input type="text" name="nombre" placeholder="Nombre(s)" v-model="state.correo" required />
-                </div>
-
-                <div class="datos nombres">
-                    <div class="cuadro">
-                        <img src="@/assets/name.svg" alt="">
-                    </div>
-                    <input type="text" name="nombre" placeholder="Nombre(s)" v-model="state.correo" required />
-                </div>
-
-                <div class="datos nombres">
-                    <div class="cuadro">
-                        <img src="@/assets/name.svg" alt="">
-                    </div>
-                    <input type="text" name="nombre" placeholder="Nombre(s)" v-model="state.correo" required />
-                </div>
-
-                <div class="datos nombres">
-                    <div class="cuadro">
-                        <img src="@/assets/name.svg" alt="">
-                    </div>
-                    <input type="text" name="nombre" placeholder="Nombre(s)" v-model="state.correo" required />
-                </div>
-            </form>
-
-        </div>
-
+    <section class="registro">
+        <Registro/>
     </section>
 
+    
+   
 </div>
 </template>
 
 <script>
-import {
-    reactive
-} from '@vue/reactivity'
+import { reactive } from '@vue/reactivity'
+import Registro from '@/components/Registro.vue'
+
 export default {
     name: 'Home',
-    setup() {
+    components:{
+        Registro
+    },
+    setup(){
         const state = reactive({
             masBeneficos: false
         });
@@ -218,7 +186,7 @@ export default {
     background-color: $primario;
 
     img {
-        width: 90%;
+        width: 95%;
         margin: 0 2.5%;
     }
 
@@ -234,14 +202,14 @@ export default {
     margin: 2rem;
 }
 
-.sec-beneficios {
-    .beneficios {
+.sec-clases {
+    .clases {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         gap: 0.7rem;
         margin-top: 0.7rem;
 
-        .beneficio {
+        .clase {
             display: flex;
             flex-flow: column nowrap;
             gap: 0.35rem;
@@ -321,74 +289,8 @@ export default {
     }
 }
 
-.registrate {
-    .wrapper {
-        display: flex;
-        justify-content: center;
-        box-shadow: 0 0 10px rgba(128, 128, 128, 0.548);
-        border-radius: 5px;
-
-        .cover {
-            height: 15rem;
-            width: 12rem;
-            object-fit: cover;
-        }
-
-        .form-holder {
-            display: flex;
-            flex-flow: column nowrap;
-            background-color: white;
-            padding: 2rem 7.5%;
-            padding-top: 0;
-            border-radius: 0 0 5px 5px;
-
-            .datos {
-                display: flex;
-                flex-flow: row nowrap;
-                margin-bottom: 0.7rem;
-
-                .cuadro {
-                    background-color: $primario;
-                    padding: 0.35rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                }
-
-                input {
-                    &:hover {
-                        border-bottom: 2px solid rgb(225, 223, 223);
-                    }
-
-                    &:focus {
-                        border-bottom: 2px solid #18314F;
-                    }
-                }
-            }
-
-            input {
-                background-color: $secundario;
-                outline: none;
-                padding-left: 0.35rem;
-            }
-
-            input,
-            button {
-                width: 100%;
-                height: 2.35rem;
-                border: 0;
-            }
-
-            .botones {
-                margin-top: 0.7rem;
-            }
-        }
-
-    }
-}
-
 @media screen and (max-width: 1000px) {
-    .sec-beneficios .beneficios {
+    .sec-clases .clases {
         grid-template-columns: 1fr 1fr 1fr;
     }
 
@@ -398,7 +300,7 @@ export default {
 }
 
 @media screen and (max-width: 890px) {
-    .sec-beneficios .beneficios {
+    .sec-clases .clases {
         grid-template-columns: 1fr 1fr;
     }
 
@@ -408,7 +310,7 @@ export default {
 }
 
 @media screen and (max-width: 500px) {
-    .sec-beneficios .beneficios {
+    .sec-clases .clases {
         grid-template-columns: 1fr;
     }
 
