@@ -23,20 +23,30 @@ export default {
     right: 0;
     bottom: 0;
     z-index: 99;
-    background-color: rgba(0, 0, 0, 0.2);
+
+    margin: 10%;
     display: flex;
-    flex-flow: column;
-    align-items: center;
-    align-self: center;
     justify-content: center;
-
-        &>* {
-            align-self: center;
-        }
-
+        
     .popup-inner {
-        background: #FFF;
-        padding: 32px;
+        background: rgba(255, 255, 255, 0.863);
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 0.7rem;
+        height: 80%;
+
+        border-radius: 5px;
+        padding: 2rem;
+        font-size: 1.5rem;
+
+        button{
+            font-size: 1.2rem;
+            width: 45%;
+            height: 15%;
+        }
     }
 }
 </style>
