@@ -36,16 +36,17 @@ export default {
         align-items: center;
         justify-content: center;
         gap: 0.7rem;
-        height: 80%;
+        height: 100%;
 
         border-radius: 5px;
         padding: 2rem;
         font-size: 1.5rem;
 
         button{
+            margin-top: 0.7rem;
             font-size: 1.2rem;
-            width: 45%;
-            height: 15%;
+            width: 10rem;
+            height: 4rem;
         }
     }
 }

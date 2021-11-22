@@ -22,14 +22,14 @@
             </li>
             <li v-if="!state.sesionActiva">
                 
-                <a href="#forms">
+                <a href="/#forms">
                     <button class="secundario">REGÍSTRATE</button>
                 </a>
                 
             </li>
         </ul>
 
-        <Menu class="menu" />
+        <Menu :sesionActiva="state.sesionActiva" class="menu" />
     </nav>
 
     <main>

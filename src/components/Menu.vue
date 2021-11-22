@@ -12,7 +12,7 @@
                     <li><router-link to="/clases" @click="cerrarMenu()">CLASES</router-link></li>
                     <li><router-link to="/maestros" @click="cerrarMenu()">MAESTROS</router-link></li>
                     <li><router-link to="/login" @click="cerrarMenu()">INICIA SESIÓN</router-link></li>
-                    <li><router-link to="/" @click="Logout">CERRAR SESIÓN</router-link></li>
+                    <li v-if="sesionActiva"><router-link to="/" @click="Logout">CERRAR SESIÓN</router-link></li>
                 </ul>
             </div>
         </div>
@@ -26,6 +26,10 @@ import { onMounted } from '@vue/runtime-core';
 import firebase from 'firebase';
 
 export default {
+    name: 'Menu',
+    props:{
+        sesionActiva: String
+    },
     setup(){
         const state = reactive({
             admin: false // se ocupara algun dia
@@ -43,7 +47,11 @@ export default {
             firebase
                 .auth()
                 .signOut()
-                .then(alert("Has cerrado tu sesión"))
+                .then(() => {
+                    alert("Has cerrado tu sesión");
+                    location.replace("/");
+                    localStorage.clear();
+                })
                 .catch(err => alert(err.message));
         }
 
