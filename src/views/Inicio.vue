@@ -17,6 +17,20 @@
     <section v-if="!sesionActiva" class="registro">
         <Registro />
     </section>
+    
+    
+    <div v-if="!sesionActiva">
+    <Popup  
+        v-if="popupTriggers.timedTrigger"
+        :TogglePopup="() => TogglePopup('timedTrigger')">
+        <h2>Uso de Cookies</h2>
+        <p>
+            Utilizamos cookies propias y de terceros para obtener datos estadísticos de la navegación 
+            de nuestros usuarios y mejorar nuestros servicios. Si acepta o continúa navegando, 
+            consideramos que acepta su uso		
+        </p>
+	</Popup>
+    </div>
 
 </div>
 </template>
@@ -25,12 +39,15 @@
 import { reactive } from '@vue/reactivity'
 import Registro from '@/components/Registro.vue'
 import Beneficios from '@/components/Beneficios.vue'
+import { ref } from 'vue';
+import Popup from '@/components/Popup.vue'
 
 export default {
     name: 'Inicio',
     components: {
         Registro,
-        Beneficios
+        Beneficios,
+        Popup
     },
     props: {
         sesionActiva: String
@@ -38,9 +55,24 @@ export default {
     setup() {
         const state = reactive({
         });
+       
+        const popupTriggers = ref({
+			buttonTrigger: false,
+			timedTrigger: false
+		});
+
+        const TogglePopup = (trigger) => {
+            popupTriggers.value[trigger] = !popupTriggers.value[trigger]
+        }
+
+		setTimeout(() => {
+			popupTriggers.value.timedTrigger = true;
+		}, 500);
 
         return {
-            state
+            state,
+            TogglePopup,
+            popupTriggers
         }
 
     }
