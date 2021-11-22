@@ -46,9 +46,10 @@ import {
     reactive
 } from '@vue/reactivity'
 import firebase from 'firebase';
+
 export default {
     name: "Login",
-    setup(props,context) {
+    setup(props, context) {
         const state = reactive({
             nombre: '',
             apellido: '',
@@ -62,12 +63,12 @@ export default {
         const Login = () => {
             firebase
                 .auth()
-                .signInWithEmailAndPassword(state.correo,state.password)
-                .then( () => {
+                .signInWithEmailAndPassword(state.correo, state.password)
+                .then(() => {
                     alert("Inicio de sesión exitoso");
                     location.replace("/");
                     context.emit("login");
-                    localStorage.setItem("sesionActiva",true);
+                    localStorage.setItem("sesionActiva", true);
                 })
                 .catch(err => alert(err.message));
         }

@@ -32,7 +32,7 @@ export default {
         Beneficios
     },
     props: {
-        sesionActiva: Boolean
+        sesionActiva: String
     },
     setup() {
         const state = reactive({
