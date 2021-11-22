@@ -8,16 +8,16 @@
             <li><router-link to="/">INICIO</router-link></li>
             <li><router-link to="/clases">CLASES</router-link></li>
             <li><router-link to="/maestros">MAESTROS</router-link></li>
-            <li><router-link to="/login">INICIA SESIÓN</router-link></li>
-            <li><router-link to="/" @click="Logout">CERRAR SESIÓN</router-link></li>
-            <li><button class="secundario">REGISTRATE</button></li>
+            <li v-if="!state.sesionActiva"><router-link to="/login">INICIA SESIÓN</router-link></li>
+            <li v-if="state.sesionActiva"><router-link to="/" @click="Logout">CERRAR SESIÓN</router-link></li>
+            <li v-if="!state.sesionActiva"><button class="secundario">REGÍSTRATE</button></li>
         </ul>
 
         <Menu class="menu" />
     </nav>
 
     <main>
-        <router-view />
+        <router-view :sesionActiva="state.sesionActiva" @login="state.sesionActiva=true" />
     </main>
 
     <footer>
@@ -50,10 +50,10 @@
 
 <script>
 import Menu from '@/components/Menu.vue'
-import {
-    reactive
-} from '@vue/reactivity'
+import { reactive } from '@vue/reactivity'
+//import { onMounted } from '@vue/runtime-core'; 
 import firebase from 'firebase';
+//import watch from 'vue';
 
 export default {
     name: 'App',
@@ -64,15 +64,42 @@ export default {
 
         document.title = "Landing Indigo";
 
-        const state = reactive({
 
+        const state = reactive({
+            sesionActiva: localStorage.getItem("sesionActiva"),
+            usuario: '',
         });
+
+        //const user = firebase.auth().currentUser;
+
+        // watch(() => user, (viejo,nuevo) => {
+        //     if(user) {
+        //         state.sesionActiva = true;
+        //         state.usuario = user.email.split('@')[0];
+        //     }
+        //     else
+        //         state.sesionActiva = false;
+        // })
+
+        // onMounted(() => {
+        //     if(user) {
+        //         state.sesionActiva = true;
+        //         state.usuario = user.email.split('@')[0];
+        //     }
+        //     else
+        //         state.sesionActiva = false;
+        // })
+    
 
         const Logout = () => {
             firebase
                 .auth()
                 .signOut()
-                .then(alert("Has cerrado tu sesión"))
+                .then(() => {
+                    alert("Has cerrado tu sesión");
+                    location.replace("/");
+                    localStorage.clear();
+                })
                 .catch(err => alert(err.message));
         }
 

@@ -4,17 +4,16 @@
         <img src="@/assets/banner.png" class="banner" />
 
         <a href="#forms">
-            <button class="cta">¡EMPIEZA HOY!</button>
+            <button v-if="!sesionActiva" class="cta">¡EMPIEZA HOY!</button>
         </a>
     </div>
 
-    <section class="sec-clases contenedor">
+
+    <section class="beneficios">
+        <Beneficios />   
     </section>
 
-    <section class="lista-maestros">
-    </section>
-
-    <section class="registro">
+    <section v-if="!sesionActiva" class="registro">
         <Registro />
     </section>
 
@@ -24,15 +23,20 @@
 <script>
 import { reactive } from '@vue/reactivity'
 import Registro from '@/components/Registro.vue'
+import Beneficios from '@/components/Beneficios.vue'
 
 export default {
-    name: 'Home',
+    name: 'Inicio',
     components: {
-        Registro
+        Registro,
+        Beneficios
+    },
+    props: {
+        sesionActiva: Boolean
     },
     setup() {
         const state = reactive({
-
+            sesionActiva: localStorage.getItem("sesionActiva"),
         });
 
         return {

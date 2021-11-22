@@ -10,7 +10,7 @@
             <form class="form-holder" @submit.prevent="Login">
 
                 <div class="titulo">
-                    <h2>INICIA SESION</h2>
+                    <h2>INICIA SESIÓN</h2>
                     <div class="linea"></div>
                 </div>
 
@@ -23,9 +23,9 @@
 
                 <div class="datos password">
                     <div class="cuadro">
-                        <img src="@/assets/svg/loc.svg" alt="">
+                        <img src="@/assets/svg/password.svg" alt="">
                     </div>
-                    <input type="text" name="password" placeholder="Contraseña" v-model="state.password" required />
+                    <input type="password" name="password" placeholder="Contraseña" v-model="state.password" required />
                 </div>
 
                 <div class="botones">
@@ -48,7 +48,7 @@ import {
 import firebase from 'firebase';
 export default {
     name: "Login",
-    setup() {
+    setup(props,context) {
         const state = reactive({
             nombre: '',
             apellido: '',
@@ -63,7 +63,12 @@ export default {
             firebase
                 .auth()
                 .signInWithEmailAndPassword(state.correo,state.password)
-                .then(alert("Inicio de sesión exitoso"))
+                .then( () => {
+                    alert("Inicio de sesión exitoso");
+                    location.replace("/");
+                    context.emit("login");
+                    localStorage.setItem("sesionActiva",true);
+                })
                 .catch(err => alert(err.message));
         }
 

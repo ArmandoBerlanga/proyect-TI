@@ -13,7 +13,6 @@
                     <li><router-link to="/maestros" @click="cerrarMenu()">MAESTROS</router-link></li>
                     <li><router-link to="/login" @click="cerrarMenu()">INICIA SESIÓN</router-link></li>
                     <li><router-link to="/" @click="Logout">CERRAR SESIÓN</router-link></li>
-                    <li><button class="secundario" @click="cerrarMenu()">REGISTRATE</button></li>
                 </ul>
             </div>
         </div>

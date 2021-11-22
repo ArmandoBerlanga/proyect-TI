@@ -44,9 +44,9 @@
 
                 <div class="datos password">
                     <div class="cuadro">
-                        <img src="@/assets/svg/loc.svg" alt="">
+                        <img src="@/assets/svg/password.svg" alt="">
                     </div>
-                    <input type="text" name="password" placeholder="Contraseña" v-model="state.password" required />
+                    <input type="password" name="password" placeholder="Contraseña" v-model="state.password" required />
                 </div>
 
                 <div class="datos date">
@@ -54,11 +54,6 @@
                         <img src="@/assets/svg/date.svg" alt="">
                     </div>
                     <input type="date" name="edad" v-model="state.cumple" required />
-                </div>
-
-                <div class="datos comentarios">
-                    <h4>Comentarios: </h4>
-                    <textarea name="comentarios" placeholder="Dejanos tus comentarios..." v-model="state.comentarios"></textarea>
                 </div>
 
                 <div class="botones">
@@ -96,8 +91,16 @@ export default {
             firebase
                 .auth()
                 .createUserWithEmailAndPassword(state.correo,state.password)
-                .then(alert("Registro exitoso"))
-                .catch(err => alert(err.message));
+                .catch(err => {
+                    if(err.message)
+                        alert("El correo ingresado ya está asociado con una cuenta. Intenta otra vez.")
+                })
+                .then((data) => {
+                    if(data) {
+                        alert("Registro exitoso")
+                        location.replace("/login");
+                    }
+                }); 
         }
 
         return {
