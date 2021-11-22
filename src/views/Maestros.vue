@@ -1,6 +1,6 @@
 <template>
 <div id="maestros">
-    <section class="lista-maestros">
+    <section class="lista-maestros contenedor">
 
         <h2>TUS MAESTROS</h2>
 
@@ -51,6 +51,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/styles/__variables.scss';
+
+.contenedor {
+    margin: 2rem;
+}
 
 .lista-maestros {
     margin: 0;

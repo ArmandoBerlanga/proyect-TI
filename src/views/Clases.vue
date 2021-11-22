@@ -1,6 +1,6 @@
 <template>
 <div id="clases">
-    <section class="sec-clases">
+    <section class="sec-clases contenedor">
 
         <h2>NUESTRAS CLASES</h2>
 
@@ -118,6 +118,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/styles/__variables.scss';
+
+.contenedor {
+    margin: 2rem;
+}
 
 .sec-clases {
     .clases {

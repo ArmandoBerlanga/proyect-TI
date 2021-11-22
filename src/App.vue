@@ -129,6 +129,14 @@ h3 {
     color: $primario;
 }
 
+#app{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    background-color: $secundario;
+    height: 100vh;
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -137,8 +145,8 @@ nav {
     padding: 1rem 2.5%;
 
     img {
-        width: 10rem;
-        height: 70%;
+        width: 14%;
+        height: 75%;
     }
 
     .lista {

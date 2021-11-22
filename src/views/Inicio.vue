@@ -8,10 +8,11 @@
         </a>
     </div>
 
-
-    <section class="beneficios">
+    <section class="beneficios contenedor">
         <Beneficios />   
     </section>
+
+    <div class="linea"></div>
 
     <section v-if="!sesionActiva" class="registro">
         <Registro />
@@ -36,7 +37,6 @@ export default {
     },
     setup() {
         const state = reactive({
-            sesionActiva: localStorage.getItem("sesionActiva"),
         });
 
         return {
@@ -72,6 +72,12 @@ export default {
 
 .contenedor {
     margin: 2rem;
+}
+
+.linea{
+    width: 100%;
+    height: 1rem;
+    background-color: $primario;
 }
 
 .registro {
