@@ -5,11 +5,21 @@
         <img src="@/assets/logo.png" alt="logo">
 
         <ul class="lista hide">
-            <li><router-link to="/">INICIO</router-link></li>
-            <li><router-link to="/clases">CLASES</router-link></li>
-            <li><router-link to="/maestros">MAESTROS</router-link></li>
-            <li v-if="!state.sesionActiva"><router-link to="/login">INICIA SESIÓN</router-link></li>
-            <li v-if="state.sesionActiva"><router-link to="/" @click="Logout">CERRAR SESIÓN</router-link></li>
+            <li>
+                <router-link to="/">INICIO</router-link>
+            </li>
+            <li>
+                <router-link to="/clases">CLASES</router-link>
+            </li>
+            <li>
+                <router-link to="/maestros">MAESTROS</router-link>
+            </li>
+            <li v-if="!state.sesionActiva">
+                <router-link to="/login">INICIA SESIÓN</router-link>
+            </li>
+            <li v-if="state.sesionActiva">
+                <router-link to="/" @click="Logout">CERRAR SESIÓN</router-link>
+            </li>
             <li v-if="!state.sesionActiva"><button class="secundario">REGÍSTRATE</button></li>
         </ul>
 
@@ -26,7 +36,7 @@
 
             <div class="info">
                 <p>© Copyright 2021. </p>
-                <p>Este website utiliza cookies. Para rechazar o conocer más, visite nuestra página de Política de Cookies.</p>
+                <p>Este website utiliza cookies. Para rechazar o conocer más, visite nuestra página de Política de Privacidad.</p>
             </div>
 
             <div class="icons">
@@ -35,13 +45,26 @@
                 <img src="@/assets/social_media/insta.png" alt="">
                 <img src="@/assets/social_media/whatsapp.png" alt="">
 
-             </div>
+            </div>
 
         </section>
 
+        <ul class="sub-links">
+            <li>
+                <router-link to="#">Derechos Reservados</router-link>
+            </li>
+            <li>
+                <router-link to="#">Acerca de nosotros</router-link>
+            </li>
+            <li>
+                <router-link to="#">Politica de Privacidad</router-link>
+            </li>
+            <li>
+                <router-link to="#">Ayuda</router-link>
+            </li>
+        </ul>
+
         <div class="linea"></div>
-
-
 
     </footer>
 
@@ -50,7 +73,9 @@
 
 <script>
 import Menu from '@/components/Menu.vue'
-import { reactive } from '@vue/reactivity'
+import {
+    reactive
+} from '@vue/reactivity'
 //import { onMounted } from '@vue/runtime-core'; 
 import firebase from 'firebase';
 //import watch from 'vue';
@@ -59,11 +84,10 @@ export default {
     name: 'App',
     components: {
         Menu
-    },    
+    },
     setup() {
 
         document.title = "Landing Indigo";
-
 
         const state = reactive({
             sesionActiva: localStorage.getItem("sesionActiva"),
@@ -89,7 +113,6 @@ export default {
         //     else
         //         state.sesionActiva = false;
         // })
-    
 
         const Logout = () => {
             firebase
@@ -102,7 +125,6 @@ export default {
                 })
                 .catch(err => alert(err.message));
         }
-
 
         return {
             state,
@@ -129,7 +151,7 @@ h3 {
     color: $primario;
 }
 
-#app{
+#app {
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
@@ -175,23 +197,24 @@ footer {
     padding: 2rem;
     background-color: $primario;
 
-    .first{
+    .first {
         display: flex;
         justify-content: space-between;
         gap: 0.7rem;
 
-        .icons{
+        .icons {
             display: flex;
             gap: 0.35rem;
-            img{
+
+            img {
                 width: 2.5rem;
                 height: 2.5rem;
                 filter: invert(100%);
                 border-radius: 50%;
-                transition: transform 750ms ease;
+                transition: transform 450ms ease;
 
-                &:hover{
-                    transform: scale(1.02, 1.02);
+                &:hover {
+                    transform: scale(1.2, 1.2);
                     box-shadow: 0 0 10px rgba(128, 128, 128, 0.548);
                 }
             }
@@ -200,11 +223,34 @@ footer {
 
     .linea {
         align-self: center;
-        align-items: c;
         background-color: white;
         width: 80%;
         height: 0.08rem;
         margin-top: 2rem;
+    }
+
+    .sub-links {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        text-align: center;
+        list-style: none;
+        gap: 0.7rem;
+        margin-top: 2rem;
+
+        li {
+            transition: transform 450ms ease;
+
+            &:hover {
+                transform: scale(1.1, 1.1);
+
+            }
+
+            a {
+                color: inherit;
+                font-weight: 50;
+            }
+        }
+
     }
 }
 
