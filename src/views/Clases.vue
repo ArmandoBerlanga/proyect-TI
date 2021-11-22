@@ -7,12 +7,10 @@
         <div class="clases">
 
             <div class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <h2>Danza Aerea</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
+                <img src="@/assets/clases/danza.png" alt="maestra dando clase de danza aerea sobre un trapecio">
+                <h3>Danza Aerea</h3>
+                <p>
+                    Más allá de ser estética e impresionante, la danza aérea otorga muchos beneficios a quien la practica. ¿Quieres conocerlos? ¡Inscribite YA!
                 </p>
             </div>
 
@@ -143,6 +141,10 @@ export default {
             border: 2px solid $primario;
             color: white;
             transition: transform 750ms ease;
+
+            h3{
+                color: white;
+            }
 
             img {
                 border-radius: 50%;
