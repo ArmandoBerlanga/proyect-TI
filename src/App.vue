@@ -41,9 +41,15 @@
 
             <div class="icons">
 
-                <img src="@/assets/social_media/facebook.png" alt="">
-                <img src="@/assets/social_media/insta.png" alt="">
-                <img src="@/assets/social_media/whatsapp.png" alt="">
+                <a href="https://www.facebook.com/indigo.circus.academy" target="_blank">
+                    <img src="@/assets/social_media/facebook.png" alt="logo de facebook">
+                </a>
+                <a href="https://www.instagram.com/indigo.circus/" target="_blank">
+                    <img src="@/assets/social_media/insta.png" alt="logo de instagram">
+                </a>
+                <a href="https://www.tiktok.com/@indigocircus?" target="_blank">
+                    <img src="@/assets/social_media/tiktok.png" alt="logo de tiktok">
+                </a>
 
             </div>
 

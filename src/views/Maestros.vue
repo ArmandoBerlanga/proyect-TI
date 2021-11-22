@@ -7,33 +7,51 @@
         <div class="maestros">
 
             <div class="maestro">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <h4>Lorem ipsum dolor sit amet.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit placeat ab blanditiis. Eos commodi velit quis? Voluptates, quos molestiae?</p>
+                <img src="@/assets/maestros/paulina.png" alt="Imagen de la mestra de Danza Aerea Paulina Flores">
+                <h3>Clase de <br> Telas</h3>
+                <p>
+                    Me llamo <b>Paulina Flores</b>, tengo 21 años y estaré impartiendo la clase de danza aérea para el grupo de teens. Llevo practicando danza aérea desde que tenía 10 años y a lo largo de este tiempo he participado en expos, obras de teatro y competencias.
+                    En esta clase te ayudaré a desarrollar tu fuerza, flexibilidad y expresión corporal.
+                    ¡Ahí te espero!
+                </p>
             </div>
 
             <div class="maestro">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <h4>Lorem ipsum dolor sit amet.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit placeat ab blanditiis. Eos commodi velit quis? Voluptates, quos molestiae?</p>
+                <img src="@/assets/maestros/luis.png" alt="Imagen del maestro de entrenamiento funcional Luis Alexandro Buendia">
+                <h3>Entrenamiento Funcional</h3>
+                <p>
+                    Hola, mi nombre es <b> Luis Buendia </b>, tengo 26 años y mi experiencia deportiva comenzó a los 6 siendo deportista de gimnasia olímpica, a los 16 ingresé a un equipo de cheerleading el cual me ayudó a llegar a una competencia mundial representando a México a mis 20 años.
+                    Comencé a dar clases de gimnasia desde los 17 años hasta hoy en día al igual que de cheerleading. <br><br>
+                    Me he capacitado tanto en entrenamiento funcional y personalizado basado en las áreas de aumento de masa muscular, tonificación y pérdida de grasa como en entrenamiento para personas con capacidades diferentes o lesiones.
+                </p>
             </div>
 
             <div class="maestro">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <h4>Lorem ipsum dolor sit amet.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit placeat ab blanditiis. Eos commodi velit quis? Voluptates, quos molestiae?</p>
+                <img src="@/assets/maestros/nahomi.png" alt="Imagen de la maestra de Contorsión Nahomi">
+                <h3>Clase de <br> Contorsión</h3>
+                <p>
+                   ¡Hola! Soy <b>Nahomi</b>, tengo 21 años y he tenido contacto con el deporte desde los 3 años. A lo largo
+                    de mi vida he practicado diversas disciplinas como escalada, danza aérea y gimnasia olímpica. La práctica 
+                    de estos deportes me ha ayudado a tener control corporal, disciplina, confianza, seguridad y fuerza tanto 
+                    física como mental. En Indigo impartiré la clase de handstand donde mi principal objetivo es ayudarte a
+                     conseguir estas cualidades y más. ¡Te espero en clase!
+                </p>
             </div>
 
             <div class="maestro">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <h4>Lorem ipsum dolor sit amet.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit placeat ab blanditiis. Eos commodi velit quis? Voluptates, quos molestiae?</p>
+                <img src="@/assets/maestros/paula.png" alt="Imagen de la maestra de Danza Aérea Paula">
+                <h3>Danza <br> Aérea</h3>
+                <p>
+                    ¡Hola! Soy <b>Paula</b>, tengo 20 años, ocho de ellos en la práctica del aéreo y cuatro impartiendo clases de esta misma disciplina. También he participado en compañías de teatro y circo, desarrollándome tanto en las alturas como en clown. Además, he tomado talleres y capacitaciones de metodología de la enseñanza para la danza aérea, seguridad y de diferentes aparatos. En Indigo voy a guiarte en tu practica aérea y a apoyarte en tu desarrollo artístico ¡Nos vemos en clase!
+                </p>
             </div>
 
             <div class="maestro">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <h4>Lorem ipsum dolor sit amet.</h4>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut suscipit placeat ab blanditiis. Eos commodi velit quis? Voluptates, quos molestiae?</p>
+                <img src="@/assets/maestros/marce2.png" alt="Imagen de la maestra de Contorsión Marcela">
+                <h3>Clase de <br> Contorsión</h3>
+                <p>
+                    ¡Hola! Soy <b>Marce</b>, tengo 23 años y llevó más de 8 años desarrollándome en el ámbito de la danza y el arte circense tanto en México como en el Extranjero. Me apasiona el arte por lo que busco ser multidisciplinaria, me he entrenado en diferentes áreas como ballet, jazz, contemporáneo, acrobacia, contorsión, danza aérea, entre otras. Me gusta compartir mi conocimiento y experiencia y ver cómo mis alumnos disfrutan y crecen con la danza y el circo. En Indigo podrás desarrollar tu Flexibilidad ¡Te espero!
+                </p>
             </div>
 
         </div>
@@ -51,6 +69,10 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/styles/__variables.scss';
+
+#maestros {
+    margin: 2rem 0;
+}
 
 .contenedor {
     margin: 2rem;
@@ -90,6 +112,11 @@ export default {
                 object-fit: cover;
             }
 
+            p {
+                height: 15rem;
+                overflow: scroll;
+            }
+
             &:hover {
                 transform: scale(1.02, 1.02);
                 box-shadow: 0 0 10px rgba(128, 128, 128, 0.548);
@@ -116,6 +143,4 @@ export default {
         grid-template-columns: 1fr;
     }
 }
-
-
 </style>

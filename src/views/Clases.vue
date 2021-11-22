@@ -8,6 +8,7 @@
 
             <div class="clase">
                 <img src="@/assets/stock/s1.jpeg" alt="">
+                <h2>Danza Aerea</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
                     culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
                     harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
