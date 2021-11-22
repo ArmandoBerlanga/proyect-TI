@@ -5,10 +5,11 @@
         <img src="@/assets/logo.png" alt="logo">
 
         <ul class="lista hide">
-            <li><a href="#app">INICIO</a></li>
-            <li><a href="#clases">CLASES</a></li>
-            <li><a href="#maestros">MAESTROS</a></li>
-            <li><a href="#">INCIAR SESIÓN</a></li>
+            <li><router-link to="/">INICIO</router-link></li>
+            <li><router-link to="/clases">CLASES</router-link></li>
+            <li><router-link to="/maestros">MAESTROS</router-link></li>
+            <li><router-link to="/login">INICIA SESIÓN</router-link></li>
+            <li><router-link to="/" @click="Logout">CERRAR SESIÓN</router-link></li>
             <li><button class="secundario">REGISTRATE</button></li>
         </ul>
 
@@ -52,6 +53,7 @@ import Menu from '@/components/Menu.vue'
 import {
     reactive
 } from '@vue/reactivity'
+import firebase from 'firebase';
 
 export default {
     name: 'App',
@@ -66,8 +68,18 @@ export default {
 
         });
 
+        const Logout = () => {
+            firebase
+                .auth()
+                .signOut()
+                .then(alert("Has cerrado tu sesión"))
+                .catch(err => alert(err.message));
+        }
+
+
         return {
-            state
+            state,
+            Logout
         }
     }
 }

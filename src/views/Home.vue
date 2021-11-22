@@ -9,11 +9,9 @@
     </div>
 
     <section class="sec-clases contenedor">
-        <Clases />
     </section>
 
     <section class="lista-maestros">
-        <Maestros />
     </section>
 
     <section class="registro">
@@ -24,18 +22,12 @@
 </template>
 
 <script>
-import {
-    reactive
-} from '@vue/reactivity'
-import Maestros from '@/components/Maestros.vue'
-import Clases from '@/components/Clases.vue'
+import { reactive } from '@vue/reactivity'
 import Registro from '@/components/Registro.vue'
 
 export default {
     name: 'Home',
     components: {
-        Clases,
-        Maestros,
         Registro
     },
     setup() {

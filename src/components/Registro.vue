@@ -7,10 +7,10 @@
 
             <img class="cover" src="@/assets/stock/s1.jpeg" alt="">
 
-            <form class="form-holder">
+            <form class="form-holder" @submit.prevent="Registro">
 
                 <div class="titulo">
-                    <h2>REGISTRATE YA</h2>
+                    <h2>REGÍSTRATE YA</h2>
                     <div class="linea"></div>
                 </div>
 
@@ -32,7 +32,7 @@
                     <div class="cuadro">
                         <img src="@/assets/svg/phone.svg" alt="">
                     </div>
-                    <input type="number" name="telefono" placeholder="Telefono" v-model="state.telefono" required />
+                    <input type="number" name="telefono" placeholder="Teléfono" v-model="state.telefono" required />
                 </div>
 
                 <div class="datos correo">
@@ -42,11 +42,11 @@
                     <input type="email" name="correo" placeholder="Correo" v-model="state.correo" required />
                 </div>
 
-                <div class="datos pais">
+                <div class="datos password">
                     <div class="cuadro">
                         <img src="@/assets/svg/loc.svg" alt="">
                     </div>
-                    <input type="text" name="pais" placeholder="Pais" v-model="state.pais" required />
+                    <input type="text" name="password" placeholder="Contraseña" v-model="state.password" required />
                 </div>
 
                 <div class="datos date">
@@ -78,21 +78,31 @@
 import {
     reactive
 } from '@vue/reactivity'
+import firebase from 'firebase';
 export default {
     name: "Registro",
     setup() {
         const state = reactive({
             nombre: '',
             apellido: '',
-            telefono: "",
+            telefono: '',
             correo: '',
-            pais: '',
-            cumple: "",
+            password: '',
+            cumple: '',
             comentarios: ''
         });
 
+        const Registro = () => {
+            firebase
+                .auth()
+                .createUserWithEmailAndPassword(state.correo,state.password)
+                .then(alert("Registro exitoso"))
+                .catch(err => alert(err.message));
+        }
+
         return {
-            state
+            state,
+            Registro
         }
     }
 }

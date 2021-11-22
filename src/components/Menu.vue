@@ -8,11 +8,12 @@
         <div>
             <div>
                 <ul>
-                    <li><a href="#app" @click="cerrarMenu()">INICIO</a></li>
-                    <li><a href="#clases" @click="cerrarMenu()">CLASES</a></li>
-                    <li><a href="#maestros" @click="cerrarMenu()">MAESTROS</a></li>
-                    <li><a href="/" @click="cerrarMenu()">INCIAR SESIÓN</a></li>
-                    <li><a href="#registro" @click="logOut()">REGISTRATE</a></li>
+                    <li><router-link to="/" @click="cerrarMenu()">INICIO</router-link></li>
+                    <li><router-link to="/clases" @click="cerrarMenu()">CLASES</router-link></li>
+                    <li><router-link to="/maestros" @click="cerrarMenu()">MAESTROS</router-link></li>
+                    <li><router-link to="/login" @click="cerrarMenu()">INICIA SESIÓN</router-link></li>
+                    <li><router-link to="/" @click="Logout">CERRAR SESIÓN</router-link></li>
+                    <li><button class="secundario" @click="cerrarMenu()">REGISTRATE</button></li>
                 </ul>
             </div>
         </div>
@@ -23,6 +24,8 @@
 <script>
 import { reactive } from '@vue/reactivity';
 import { onMounted } from '@vue/runtime-core';
+import firebase from 'firebase';
+
 export default {
     setup(){
         const state = reactive({
@@ -37,7 +40,16 @@ export default {
         });
         })
 
-        function logOut() {
+        const Logout = () => {
+            firebase
+                .auth()
+                .signOut()
+                .then(alert("Has cerrado tu sesión"))
+                .catch(err => alert(err.message));
+        }
+
+
+        function cerrarSesion() {
             cerrarMenu();
             localStorage.clear();  
         }
@@ -50,7 +62,9 @@ export default {
         return{
             state,
             cerrarMenu,
-            logOut
+            cerrarSesion,
+            Logout
+
         }
     }
 

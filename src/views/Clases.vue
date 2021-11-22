@@ -87,9 +87,7 @@
 </template>
 
 <script>
-import {
-    reactive
-} from '@vue/reactivity'
+import { reactive } from '@vue/reactivity'
 export default {
     name: 'Clases',
     setup() {
