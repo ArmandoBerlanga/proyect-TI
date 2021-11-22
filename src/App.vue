@@ -20,7 +20,13 @@
             <li v-if="state.sesionActiva">
                 <router-link to="/" @click="Logout">CERRAR SESIÓN</router-link>
             </li>
-            <li v-if="!state.sesionActiva"><button class="secundario">REGÍSTRATE</button></li>
+            <li v-if="!state.sesionActiva">
+                
+                <a href="#forms">
+                    <button class="secundario">REGÍSTRATE</button>
+                </a>
+                
+            </li>
         </ul>
 
         <Menu class="menu" />
@@ -35,8 +41,8 @@
         <section class="first">
 
             <div class="info">
-                <p>© Copyright 2021. </p>
-                <p>Este website utiliza cookies. Para rechazar o conocer más, visite nuestra página de Política de Privacidad.</p>
+                Derechos Reservados © 2021 Todos los Derechos Reservados Indigo Circus Academy <br>
+                Paseo del Bienestar 414 Col. Alpes Norte. Saltillo Coah. MX 844-232-4782
             </div>
 
             <div class="icons">
@@ -56,17 +62,17 @@
         </section>
 
         <ul class="sub-links">
-            <li>
+            <!-- <li>
                 <router-link to="#">Derechos Reservados</router-link>
+            </li> -->
+            <li>
+                <router-link to="/nosotros">Acerca de nosotros</router-link>
             </li>
             <li>
-                <router-link to="#">Acerca de nosotros</router-link>
+                <router-link to="/politicas_privacidad">Politica de Privacidad</router-link>
             </li>
             <li>
-                <router-link to="#">Politica de Privacidad</router-link>
-            </li>
-            <li>
-                <router-link to="#">Ayuda</router-link>
+                <router-link to="ayuda">Ayuda</router-link>
             </li>
         </ul>
 

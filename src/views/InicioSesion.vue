@@ -5,7 +5,7 @@
 
         <div class="wrapper">
 
-            <img class="cover" src="@/assets/stock/s1.jpeg" alt="">
+            <img class="cover" src="@/assets/cover2.png" alt="">
 
             <form class="form-holder" @submit.prevent="Login">
 

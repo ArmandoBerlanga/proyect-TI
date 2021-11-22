@@ -24,6 +24,24 @@ const routes = [{
         component: () =>
             import ( /* webpackChunkName: "about" */ '../views/Maestros.vue')
     },
+    {
+        path: '/politicas_privacidad',
+        name: 'Privacidad',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/views-footer/Privacidad.vue')
+    },
+    {
+        path: '/nosotros',
+        name: 'AboutUs',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/views-footer/AboutUs.vue')
+    },
+    {
+        path: '/ayuda',
+        name: 'Ayuda',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/views-footer/Ayuda.vue')
+    },
 
 
 ]
