@@ -10,7 +10,7 @@
             <form class="form-holder" @submit.prevent="Login">
 
                 <div class="titulo">
-                    <h2>INICIA SESIÓN</h2>
+                    <h2>INICIAR SESIÓN</h2>
                     <div class="linea"></div>
                 </div>
 
@@ -29,7 +29,7 @@
                 </div>
 
                 <div class="botones">
-                    <button class="primario">INICIA SESIÓN</button>
+                    <button class="primario">ACCEDER</button>
                 </div>
 
             </form>

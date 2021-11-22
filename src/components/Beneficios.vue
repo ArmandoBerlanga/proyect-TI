@@ -7,38 +7,34 @@
         <div class="clases">
 
             <div class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
+                <img src="@/assets/beneficios/beneficio1.png" alt="">
+                <h3>Convive</h3>
+                <p>
+                    Estarás rodeado de personas energéticas y activas como tú.
                 </p>
             </div>
 
             <div class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
+                <img src="@/assets/beneficios/beneficio2.png" alt="">
+                <h3>Aprende</h3>
+                <p>
+                    Aprenderás habilidades que no se aprenden en ningún otro lado.
                 </p>
             </div>
 
             <div class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
+                <img src="@/assets/beneficios/beneficio3.png" alt="">
+                <h3>Atrévete</h3>
+                <p>
+                    Toma el reto de aprende una habilidad única y diferente.
                 </p>
             </div>
 
             <div class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
+                <img src="@/assets/beneficios/beneficio4.png" alt="">
+                <h3>Únete a la gran famila Índigo Circus</h3>
+                <p>
+                    Somos una comunidad unida que busca divertirse a través de la expresión de este bello arte.
                 </p>
             </div>
 

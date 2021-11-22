@@ -57,7 +57,7 @@
                 </div>
 
                 <div class="botones">
-                    <button class="primario">REGISTRATE</button>
+                    <button class="primario">REGISTRARSE</button>
                 </div>
 
             </form>

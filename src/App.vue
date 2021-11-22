@@ -153,7 +153,7 @@ export default {
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     box-sizing: border-box;
 }
 
@@ -186,15 +186,24 @@ nav {
     .lista {
         display: flex;
         align-items: center;
-        gap: 0.7rem;
+        gap: 1.5rem;
         color: white;
         list-style: none;
 
         a {
             text-decoration: none;
             color: inherit;
+            font-size: 120%;
         }
 
+    }
+
+    li {
+        &:hover {
+            transform: scale(1.1, 1.1);
+            color: $amarillo;
+
+        }
     }
 }
 

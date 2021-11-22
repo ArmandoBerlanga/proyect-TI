@@ -7,76 +7,56 @@
         <div class="clases">
 
             <div class="clase">
-                <img src="@/assets/clases/danza.png" alt="maestra dando clase de danza aerea sobre un trapecio">
-                <h3>Danza Aerea</h3>
+                <img src="@/assets/clases/danza_area.png" alt="">
+                <h3>Danza área</h3>
                 <p>
-                    Más allá de ser estética e impresionante, la danza aérea otorga muchos beneficios a quien la practica. ¿Quieres conocerlos? ¡Inscribite YA!
+                    Más allá de ser estética e impresionante, la danza aérea otorga muchos beneficios a quien la practica. ¿Quieres conocerlos? ¡Aquí te los dejamos!
+                <br><br>
+                    1. Favorece la condición física. La ejecución de coreografías demanda resistencia del cuerpo.
+                <br><br>
+                    2. Tonifica el cuerpo. Desde subir la tela hasta realizar figuras y secuencias requiere fuerza, misma que desarrollarás durante la práctica.
+                <br><br>
+                    3. Al requerir concentración, favorece a la respiración, permitiendo la liberación del estrés.
                 </p>
             </div>
+
 
             <div class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
-                </p>
-            </div>
-
-            <div class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
-                </p>
-            </div>
-
-            <div class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
+                <img src="@/assets/clases/handstand.png" alt="">
+                <h3>Handstand</h3>
+                <p>
+                    El parado de manos es sin duda una habilidad que muchas personas quisieran tener, sin embargo ¿Conoces los beneficios de su práctica? ¡Aquí te los dejamos! 
+                <br><br>
+                    1. Tonifica y fortalece el cuerpo. Se trabajan espalda, hombros, brazos, muñecas y abdomen.
+                <br><br>
+                    2. Mejora tu metabolismo.
+                <br><br>
+                    3.  Activa la circulación de la sangre hacia la cabeza, por lo que es excelente para disminuir la ansiedad y regular el sueño.
                 </p>
             </div>
 
             <div v-if="state.masBeneficos" class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
+                <img src="@/assets/clases/contorsion.png" alt="">
+                <h3>Contorsión</h3>
+                <p>
+                    ¿Tienes curiosidad de iniciarte en el mundo de la contorsión pero aún tienes dudas? Aquí te dejamos más motivos para intentarlo:
+                <br><br>
+                    1. Mejora el rendimiento físico y reduce el riesgo de lesiones.
+                <br><br>
+                    2. Reduce molestias musculares y mejora la postura. ¡Estirar después de tu entrenamiento físico puede marcar una gran diferencia!
+                <br><br>
+                    3. Aumenta la temperatura del tejido muscular, favoreciendo a la circulación y el transporte de nutrientes.
                 </p>
             </div>
 
             <div v-if="state.masBeneficos" class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
+                <img src="@/assets/clases/entrenamiento_funcional.png" alt="">
+                <h3>Entrenamiento Funcional</h3>
+                <p>
+                    El entrenamiento funcional es ideal si buscas mejorar tu rendimiento en tus actividades diarias y un ejercicio personalizado para cubrir tus necesidades. Combínalo con nuestras demás clases o adáptalo al estilo de vida que más te guste.
+                <br>
                 </p>
             </div>
-
-            <div v-if="state.masBeneficos" class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
-                </p>
-            </div>
-
-            <div v-if="state.masBeneficos" class="clase">
-                <img src="@/assets/stock/s1.jpeg" alt="">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat,
-                    culpa? Optio nostrum ad eligendi, aliquam ullam praesentium. Exercitationem
-                    harum repellat illo excepturi architecto nostrum inventore, a dolor facilis? Alias,
-                    illum?
-                </p>
-            </div>
-
         </div>
 
         <i class="show" @click="showMore">MOSTRAR MÁS ...</i>
@@ -125,7 +105,7 @@ export default {
 .sec-clases {
     .clases {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         gap: 0.7rem;
         margin-top: 0.7rem;
 
@@ -144,12 +124,15 @@ export default {
 
             h3{
                 color: white;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                font-size: 25px;
             }
 
             img {
                 border-radius: 50%;
-                height: 10rem;
-                width: 10rem;
+                height: 15rem;
+                width: 15rem;
                 object-fit: cover;
             }
 
