@@ -113,4 +113,21 @@ export default {
 
 <style lang="scss" scoped>
 @import '@/styles/forms.scss';
+
+@media screen and (max-width: 900px) {
+    .wrapper {
+        flex-flow: column nowrap;
+        .cover {
+            border-radius: 5px 5px 0 0;
+            width: 100%;
+            height: 12rem;
+            object-fit: cover;
+        }
+        .form-holder {
+            width: 100%;
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
 </style>

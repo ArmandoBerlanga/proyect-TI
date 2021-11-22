@@ -145,8 +145,8 @@ nav {
     padding: 1rem 2.5%;
 
     img {
-        width: 14%;
-        height: 75%;
+        width: 8rem;
+        height: auto;
     }
 
     .lista {
