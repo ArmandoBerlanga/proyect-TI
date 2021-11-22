@@ -1,7 +1,12 @@
 const express = require('express');
-const serveStatic = require("serve-static")
-const path = require('path');
+const serveStatic = require('serve-static');
+const history = require('connect-history-api-fallback');
+// const enforce = require('express-sslify');
+
 const app = express();
-app.use(serveStatic(path.join(__dirname, 'dist')));
-const port = process.env.PORT || 3000;
-app.listen(port);
+
+// app.use(enforce.HTTPS({ trustProtoHeader: true }));
+app.use(serveStatic(__dirname + '/dist'));
+app.use(history());
+
+app.listen(process.env.PORT || 5000);
