@@ -8,35 +8,41 @@
 
             <div class="video">
                 <div>
-                    <h3>Clase 1: Danza área</h3>
+                    <h3>Clase 1: Clase Kids</h3>
                     <div class="video_yt">
                         <iframe width="1000" height="500" src="https://www.youtube.com/embed/OISlq18xfWw" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div>
-                    <p>Este es un video en donde</p>
+                    <p>
+                        Aquí puedes observar un poco de nuestra clase del grupo Kids con la coach Nahomi. A las niñas les encanta bailar y esta es nuestra manera de incorporar un poco de calentamiento, baile y acondicionamiento de una manera divertida.
+                    </p>
                 </div>
             </div>
             <div class="video">
                 <div>
-                    <h3>Clase 2: Danza área</h3>
+                    <h3>Clase 2: Duro Aro</h3>
                     <div class="video_yt">
                         <iframe width="1000" height="500" src="https://www.youtube.com/embed/RJeVpXkHoCI" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div>
-                    <p>Este es un video en donde</p>
+                     <p>
+                        Este es un pequeño clip de nuestra clase de aro, aquí puedes observar que también trabajamos con parejas para lograr duos increíbles. Al trabajar con otra persona puedes lograr cosas increíbles y trabajamos la confianza.
+                    </p>
                 </div>
             </div>
             <div class="video">
                 <div>
-                    <h3>Clase 3: Danza área</h3>
+                    <h3>Clase 3: Double Drop</h3>
                     <div class="video_yt">
                         <iframe width="1000" height="500" src="https://www.youtube.com/embed/uugUDWTDTKs" frameborder="0" allowfullscreen></iframe>
                     </div>
                 </div>
                 <div>
-                    <p>Este es un video en donde</p>
+                    <p>
+                        Esta es una caída doble que es para personas intermedio-avanzado. Es una caída doble que es súper divertida y sencilla. 
+                    </p>
                 </div>
             </div>
 

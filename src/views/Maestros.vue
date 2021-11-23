@@ -142,13 +142,13 @@ export default {
 
 @media screen and (max-width: 1000px) {
     .lista-maestros .maestros {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 890px) {
     .lista-maestros .maestros {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 

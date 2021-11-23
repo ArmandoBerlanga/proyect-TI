@@ -161,13 +161,13 @@ export default {
 
 @media screen and (max-width: 1000px) {
     .sec-clases .clases {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 890px) {
     .sec-clases .clases {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr;
     }
 }
 

@@ -9,21 +9,21 @@
             <div>
                 <ul>
                     <li>
-                        <router-link to="/">INICIO</router-link>
+                        <router-link to="/" @click="cerrarMenu()">INICIO</router-link>
                     </li>
                     <li>
-                        <router-link to="/clases">CLASES</router-link>
+                        <router-link to="/clases" @click="cerrarMenu()">CLASES</router-link>
                     </li>
                     <li>
-                        <router-link to="/maestros">MAESTROS</router-link>
+                        <router-link to="/maestros" @click="cerrarMenu()">MAESTROS</router-link>
                     </li>
                     <li v-if="state.sesionActiva">
-                        <router-link to="/videos">VIDEOS</router-link>
+                        <router-link to="/videos" @click="cerrarMenu()">VIDEOS</router-link>
                     </li>
                     <li v-if="!state.sesionActiva">
-                        <router-link to="/login">INICIAR SESIÓN</router-link>
+                        <router-link to="/login" @click="cerrarMenu()">INICIAR SESIÓN</router-link>
                     </li>
-                    <li v-if="state.sesionActiva">
+                    <li v-if="state.sesionActiva" @click="cerrarMenu()">
                         <router-link to="/" @click="logout()">CERRAR SESIÓN</router-link>
                     </li>
                 </ul>
@@ -45,13 +45,12 @@ export default {
     },
     setup(){
         const state = reactive({
-            admin: false, // se ocupara algun dia
-            sesionActiva: localStorage.getItem("sesionActiva"),
+            sesionActiva: localStorage.getItem("sesionActiva")
         });
 
         onMounted(() =>{
             document.addEventListener('keyup', function (evt) {
-            if (evt.key === 27) { // esc es la letra 27 es pa cerrar el menu
+            if (evt.key === 27) {
                 cerrarMenu()
             }
         });
