@@ -130,9 +130,19 @@ export default {
 }
 
 .video {
-    padding-top: 30px;
-    display: flex;
-    justify-content: center;
+    height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+}
+
+.video iframe, .video object, .video embed {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
 }
 
 @media screen and (max-width: 1000px) {

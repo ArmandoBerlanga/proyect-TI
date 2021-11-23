@@ -8,11 +8,24 @@
         <div>
             <div>
                 <ul>
-                    <li><router-link to="/" @click="cerrarMenu()">INICIO</router-link></li>
-                    <li><router-link to="/clases" @click="cerrarMenu()">CLASES</router-link></li>
-                    <li><router-link to="/maestros" @click="cerrarMenu()">MAESTROS</router-link></li>
-                    <li><router-link to="/login" @click="cerrarMenu()">INICIA SESIÓN</router-link></li>
-                    <li v-if="sesionActiva"><router-link to="/" @click="Logout">CERRAR SESIÓN</router-link></li>
+                    <li>
+                        <router-link to="/">INICIO</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/clases">CLASES</router-link>
+                    </li>
+                    <li>
+                        <router-link to="/maestros">MAESTROS</router-link>
+                    </li>
+                    <li v-if="state.sesionActiva">
+                        <router-link to="/videos">VIDEOS</router-link>
+                    </li>
+                    <li v-if="!state.sesionActiva">
+                        <router-link to="/login">INICIAR SESIÓN</router-link>
+                    </li>
+                    <li v-if="state.sesionActiva">
+                        <router-link to="/" @click="Logout">CERRAR SESIÓN</router-link>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -32,7 +45,8 @@ export default {
     },
     setup(){
         const state = reactive({
-            admin: false // se ocupara algun dia
+            admin: false, // se ocupara algun dia
+            sesionActiva: localStorage.getItem("sesionActiva"),
         });
 
         onMounted(() =>{

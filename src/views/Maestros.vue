@@ -56,7 +56,7 @@
 
             <div class="maestro">
                 <img src="@/assets/maestros/marce1.png" alt="Imagen de la maestra de Trapecio Marcela González">
-                <h3>Marcela Dainitín Dávila</h3>
+                <h3>Marcela González Valdez</h3>
                 <p>
                     ¡Hola! Soy <b>Marce</b>, tengo 19 años y practico danza aérea desde que tengo 10. A lo largo de estos años he practicado en varios aparatos aéreos como la tela, el aro y el trapecio. Además he tomado talleres y competido a nivel estatal. La danza aérea es una disciplina que te ayudará a soltarte y tener más confianza en ti mismx. Yo me di cuenta de que el trapecio es el aparato con el que más me identifico y en el que más me divierto y puede ser que tú también. En Indigo te guiaré para que te puedas desarrollar en el trapecio. ¡Te veo en clase!                </p>
             </div>

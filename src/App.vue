@@ -18,7 +18,7 @@
                 <router-link to="/videos">VIDEOS</router-link>
             </li>
             <li v-if="!state.sesionActiva">
-                <router-link to="/login">INICIA SESIÓN</router-link>
+                <router-link to="/login">INICIAR SESIÓN</router-link>
             </li>
             <li v-if="state.sesionActiva">
                 <router-link to="/" @click="Logout">CERRAR SESIÓN</router-link>

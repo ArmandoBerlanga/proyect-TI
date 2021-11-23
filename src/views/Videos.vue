@@ -9,7 +9,9 @@
             <div class="video">
                 <div>
                     <h3>Clase 1: Danza área</h3>
-                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/biwjNyr5VHY" frameborder="0" allowfullscreen></iframe>
+                    <div class="video_yt">
+                        <iframe width="1000" height="500" src="https://www.youtube.com/embed/OISlq18xfWw" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div>
                     <p>Este es un video en donde</p>
@@ -18,7 +20,9 @@
             <div class="video">
                 <div>
                     <h3>Clase 2: Danza área</h3>
-                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/biwjNyr5VHY" frameborder="0" allowfullscreen></iframe>
+                    <div class="video_yt">
+                        <iframe width="1000" height="500" src="https://www.youtube.com/embed/RJeVpXkHoCI" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div>
                     <p>Este es un video en donde</p>
@@ -27,7 +31,9 @@
             <div class="video">
                 <div>
                     <h3>Clase 3: Danza área</h3>
-                    <iframe width="1000" height="500" src="https://www.youtube.com/embed/biwjNyr5VHY" frameborder="0" allowfullscreen></iframe>
+                    <div class="video_yt">
+                        <iframe width="1000" height="500" src="https://www.youtube.com/embed/uugUDWTDTKs" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
                 <div>
                     <p>Este es un video en donde</p>
@@ -66,6 +72,22 @@ export default {
     margin: 2rem;
 }
 
+.video_yt {
+    height: 0;
+	overflow: hidden;
+	padding-bottom: 56.25%;
+	padding-top: 30px;
+	position: relative;
+}
+
+.video_yt iframe, .video object, .video embed {
+	height: 100%;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
 .sec-videos {
     .videos {
         display: grid;
@@ -75,7 +97,7 @@ export default {
 
         .video {
             display: grid;
-            grid-template-columns: 1fr 1fr;
+            grid-template-columns: 1fr 0.6fr;
             gap: 0.35rem;
             align-items: center;
             text-align: center;
@@ -127,16 +149,25 @@ export default {
     .sec-videos .videos {
         grid-template-columns: 1fr;
     }
+    .sec-videos .videos .video {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width: 890px) {
     .sec-videos .videos {
         grid-template-columns: 1fr;
     }
+    .sec-videos .videos .video {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media screen and (max-width: 500px) {
     .sec-videos .videos {
+        grid-template-columns: 1fr;
+    }
+    .sec-videos .videos .video {
         grid-template-columns: 1fr;
     }
 }
