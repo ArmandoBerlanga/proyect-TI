@@ -11,9 +11,11 @@
         <br><br>
         Para navegar por SITIO-WEB no es necesario que facilites ningún dato personal. Los casos en los que sí proporcionas tus datos personales son los siguientes:
         <br><br>
-        Al contactar a través de los formularios de contacto o enviar un correo electrónico.
-        Al realizar un comentario en un artículo o página.
-        Al inscribirte en un formulario de suscripción de cualquiera de las clases.
+        <b>1)</b> Al contactar a través de los formularios de contacto o enviar un correo electrónico.
+        <br><br>
+        <b>2)</b> Al realizar un comentario en un artículo o página.
+        <br><br>
+        <b>3)</b> Al inscribirte en un formulario de suscripción de cualquiera de las clases.
     </p>
 
 </div>

@@ -42,13 +42,11 @@
 </template>
 
 <script>
-import {
-    reactive
-} from '@vue/reactivity'
-import firebase from 'firebase';
+import { reactive } from '@vue/reactivity'
+import { auth } from '@/firebase.js';
 
 export default {
-    name: "Login",
+    name: "IniciaSesion",
     setup(props, context) {
         const state = reactive({
             nombre: '',
@@ -60,20 +58,20 @@ export default {
             comentarios: ''
         });
 
+
         function login() {
-            firebase
-                .auth()
-                .signInWithEmailAndPassword(state.correo, state.password)
-                .then(() => {
-                    alert("Inicio de sesión exitoso");
-                    location.replace("/");
-                    context.emit("login");
-                    localStorage.setItem("sesionActiva", true);
-                })
-                .catch(err => {
-                    if(err.message)
-                        alert("Credenciales inválidas. Intenta otra vez.")
-                })
+            auth
+            .signInWithEmailAndPassword(state.correo, state.password)
+            .then(() => {
+                alert("Inicio de sesión exitoso");
+                location.replace("/");
+                context.emit("login");
+                localStorage.setItem("sesionActiva", true);
+            })
+            .catch(err => {
+                if(err.message)
+                    alert("Credenciales inválidas. Intenta otra vez.")
+            })
         }
 
         return {

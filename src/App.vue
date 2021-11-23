@@ -88,12 +88,8 @@
 
 <script>
 import Menu from '@/components/Menu.vue'
-import {
-    reactive
-} from '@vue/reactivity'
-//import { onMounted } from '@vue/runtime-core'; 
-import firebase from 'firebase';
-//import watch from 'vue';
+import { reactive } from '@vue/reactivity'
+import { auth } from '@/firebase.js';
 
 export default {
     name: 'App',
@@ -110,15 +106,14 @@ export default {
         });
 
         function logout() {
-            firebase
-                .auth()
-                .signOut()
-                .then(() => {
-                    alert("Has cerrado tu sesión");
-                    location.replace("/");
-                    localStorage.clear();
-                })
-                .catch(err => alert(err.message));
+            auth
+            .signOut()
+            .then(() => {
+                alert("Has cerrado tu sesión");
+                location.replace("/");
+                localStorage.clear();
+            })
+            .catch(err => alert(err.message));
         }
         
         return {

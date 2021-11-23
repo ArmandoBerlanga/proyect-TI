@@ -71,7 +71,9 @@
 
 <script>
 import { reactive } from '@vue/reactivity'
-import firebase from 'firebase';
+import { auth } from '@/firebase.js'
+import { db } from '@/firebase.js'
+
 export default {
     name: "Registro",
     setup() {
@@ -81,28 +83,33 @@ export default {
             telefono: '',
             correo: '',
             password: '',
-            cumple: '',
-            comentarios: '',
+            cumple: ''
         });
 
-        function registro() {
-            firebase
-                .auth()
-                .createUserWithEmailAndPassword(state.correo,state.password)
-                .catch(err => {
-                    if(err.message=="Password should be at least 6 characters") {
-                        alert("La contraseña debe contener al menos 6 caracteres.")
 
-                    }else {
-                        alert("El correo ingresado ya está asociado con una cuenta. Intenta otra vez.")
-                    }
-                })
-                .then((data) => {
-                    if(data) {
-                        alert("Registro exitoso")
-                        location.replace("/login");
-                    }
-                }); 
+        function registro() {
+            auth.createUserWithEmailAndPassword(state.correo,state.password)
+            .then(cred => {
+                return db.collection('usuarios').doc(cred.user.uid).set({
+                    correo: state.correo,
+                    nombre: state.nombre,
+                    apellido: state.apellido,
+                    telefono: state.telefono,
+                    cumple: state.cumple,
+                });
+            })
+            .then(() => {
+                alert("Registro exitoso")
+                location.replace("/login");
+            })
+            .catch(err => {
+                if(err.message=="Password should be at least 6 characters") {
+                    alert("La contraseña debe contener al menos 6 caracteres.")
+                } else {
+                    alert("El correo ingresado ya está asociado con una cuenta. Intenta otra vez.")
+                }
+            });
+               
         }
 
         return {
