@@ -14,6 +14,9 @@
             <li>
                 <router-link to="/maestros">MAESTROS</router-link>
             </li>
+            <li v-if="state.sesionActiva">
+                <router-link to="/videos">VIDEOS</router-link>
+            </li>
             <li v-if="!state.sesionActiva">
                 <router-link to="/login">INICIA SESIÓN</router-link>
             </li>

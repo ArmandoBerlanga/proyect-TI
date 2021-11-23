@@ -70,7 +70,10 @@ export default {
                     context.emit("login");
                     localStorage.setItem("sesionActiva", true);
                 })
-                .catch(err => alert(err.message));
+                .catch(err => {
+                    if(err.message)
+                        alert("Credenciales inválidas. Intenta otra vez.")
+                })
         }
 
         return {

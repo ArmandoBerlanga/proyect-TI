@@ -25,6 +25,12 @@ const routes = [{
             import ( /* webpackChunkName: "about" */ '../views/Maestros.vue')
     },
     {
+        path: '/videos',
+        name: 'Videos',
+        component: () =>
+            import ( /* webpackChunkName: "about" */ '../views/Videos.vue')
+    },
+    {
         path: '/politicas_privacidad',
         name: 'Privacidad',
         component: () =>

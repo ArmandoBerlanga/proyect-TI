@@ -1,5 +1,5 @@
 <template>
-<div id="beneficios">
+<div id="promociones">
     <section class="sec-clases">
 
         <h2>RECOMPENSAS</h2>
@@ -7,34 +7,34 @@
         <div class="clases">
 
             <div class="clase">
-                <img src="@/assets/beneficios/beneficio1.png" alt="">
-                <h3>Convive</h3>
+                <img src="@/assets/recompensas/recompensa1.png" alt="">
+                <h3>Clase Gratis</h3>
                 <p>
-                    Estarás rodeado de personas energéticas y activas como tú.
+                   Lleva un comprobante de tu registro y tu primera clase será gratis.
                 </p>
             </div>
 
             <div class="clase">
-                <img src="@/assets/beneficios/beneficio2.png" alt="">
-                <h3>Aprende</h3>
+                <img src="@/assets/recompensas/recompensa2.png" alt="">
+                <h3>Gimnasio</h3>
                 <p>
-                    Aprenderás habilidades que no se aprenden en ningún otro lado.
+                    Ahora como miembro, tendrás acceso ilimitado a nuestra serie de videos de práctica.
                 </p>
             </div>
 
             <div class="clase">
-                <img src="@/assets/beneficios/beneficio3.png" alt="">
-                <h3>Atrévete</h3>
+                <img src="@/assets/recompensas/recompensa3.png" alt="">
+                <h3>Promociones</h3>
                 <p>
-                    Toma el reto de aprende una habilidad única y diferente.
+                    En tu correo recibirás promociones para las distintas clases.
                 </p>
             </div>
 
             <div class="clase">
-                <img src="@/assets/beneficios/beneficio4.png" alt="">
-                <h3>Únete a la gran famila Índigo Circus</h3>
+                <img src="@/assets/recompensas/recompensa4.png" alt="">
+                <h3>Descuento</h3>
                 <p>
-                    Somos una comunidad unida que busca divertirse a través de la expresión de este bello arte.
+                    Ahora tendrás acceso a descuentos en distintas tiendas deportivas.
                 </p>
             </div>
 
@@ -48,7 +48,7 @@
 <script>
 import { reactive } from '@vue/reactivity'
 export default {
-    name: 'Recompensas',
+    name: 'Promociones',
     setup() {
         const state = reactive({
         });

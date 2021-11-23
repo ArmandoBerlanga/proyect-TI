@@ -8,8 +8,20 @@
         </a>
     </div>
 
-    <section class="beneficios contenedor">
+    <div class="linea"></div>
+
+    <section v-if="!sesionActiva" class="video">
+        <div>
+            <iframe width="1000" height="500" src="https://www.youtube.com/embed/biwjNyr5VHY" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section v-if="!sesionActiva" class="beneficios contenedor">
         <Beneficios />   
+    </section>
+
+    <section v-if="sesionActiva" class="beneficios contenedor">
+        <Recompensas />   
     </section>
 
     <div class="linea"></div>
@@ -39,6 +51,7 @@
 import { reactive } from '@vue/reactivity'
 import Registro from '@/components/Registro.vue'
 import Beneficios from '@/components/Beneficios.vue'
+import Recompensas from '@/components/Recompensas.vue'
 import { ref } from 'vue';
 import Popup from '@/components/Popup.vue'
 
@@ -47,7 +60,8 @@ export default {
     components: {
         Registro,
         Beneficios,
-        Popup
+        Popup,
+        Recompensas
     },
     props: {
         sesionActiva: String
@@ -57,7 +71,6 @@ export default {
         });
        
         const popupTriggers = ref({
-			buttonTrigger: false,
 			timedTrigger: false
 		});
 
@@ -114,6 +127,12 @@ export default {
 
 .registro {
     padding: 2rem;
+}
+
+.video {
+    padding-top: 30px;
+    display: flex;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1000px) {

@@ -70,9 +70,7 @@
 </template>
 
 <script>
-import {
-    reactive
-} from '@vue/reactivity'
+import { reactive } from '@vue/reactivity'
 import firebase from 'firebase';
 export default {
     name: "Registro",
@@ -84,7 +82,7 @@ export default {
             correo: '',
             password: '',
             cumple: '',
-            comentarios: ''
+            comentarios: '',
         });
 
         const Registro = () => {
@@ -92,8 +90,12 @@ export default {
                 .auth()
                 .createUserWithEmailAndPassword(state.correo,state.password)
                 .catch(err => {
-                    if(err.message)
+                    if(err.message=="Password should be at least 6 characters") {
+                        alert("La contraseña debe contener al menos 6 caracteres.")
+
+                    }else {
                         alert("El correo ingresado ya está asociado con una cuenta. Intenta otra vez.")
+                    }
                 })
                 .then((data) => {
                     if(data) {
