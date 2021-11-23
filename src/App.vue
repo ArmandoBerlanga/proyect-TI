@@ -2,7 +2,7 @@
 <div id="app">
 
     <nav>
-        <img src="@/assets/logo.png" alt="Logo de Indigo Circus">
+        <router-link to="/"><img src="@/assets/logo.png" alt="Logo de Indigo Circus"></router-link>
 
         <ul class="lista hide">
             <li>

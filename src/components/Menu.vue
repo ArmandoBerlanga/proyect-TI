@@ -67,12 +67,9 @@ export default {
                     localStorage.clear();
                 })
                 .catch(err => alert(err.message));
-        }
 
-
-        function cerrarSesion() {
             cerrarMenu();
-            localStorage.clear();  
+
         }
 
         function cerrarMenu() {
@@ -83,7 +80,6 @@ export default {
         return{
             state,
             cerrarMenu,
-            cerrarSesion,
             logout
 
         }
