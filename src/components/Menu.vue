@@ -24,7 +24,7 @@
                         <router-link to="/login">INICIAR SESIÓN</router-link>
                     </li>
                     <li v-if="state.sesionActiva">
-                        <router-link to="/" @click="Logout">CERRAR SESIÓN</router-link>
+                        <router-link to="/" @click="logout()">CERRAR SESIÓN</router-link>
                     </li>
                 </ul>
             </div>
@@ -57,7 +57,7 @@ export default {
         });
         })
 
-        const Logout = () => {
+        function logout() {
             firebase
                 .auth()
                 .signOut()
@@ -84,7 +84,7 @@ export default {
             state,
             cerrarMenu,
             cerrarSesion,
-            Logout
+            logout
 
         }
     }

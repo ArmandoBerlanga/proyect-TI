@@ -21,7 +21,7 @@
                 <router-link to="/login">INICIAR SESIÓN</router-link>
             </li>
             <li v-if="state.sesionActiva">
-                <router-link to="/" @click="Logout">CERRAR SESIÓN</router-link>
+                <router-link to="/" @click="logout()">CERRAR SESIÓN</router-link>
             </li>
             <li v-if="!state.sesionActiva">
                 
@@ -109,27 +109,7 @@ export default {
             usuario: '',
         });
 
-        //const user = firebase.auth().currentUser;
-
-        // watch(() => user, (viejo,nuevo) => {
-        //     if(user) {
-        //         state.sesionActiva = true;
-        //         state.usuario = user.email.split('@')[0];
-        //     }
-        //     else
-        //         state.sesionActiva = false;
-        // })
-
-        // onMounted(() => {
-        //     if(user) {
-        //         state.sesionActiva = true;
-        //         state.usuario = user.email.split('@')[0];
-        //     }
-        //     else
-        //         state.sesionActiva = false;
-        // })
-
-        const Logout = () => {
+        function logout() {
             firebase
                 .auth()
                 .signOut()
@@ -140,10 +120,10 @@ export default {
                 })
                 .catch(err => alert(err.message));
         }
-
+        
         return {
             state,
-            Logout
+            logout
         }
     }
 }

@@ -7,7 +7,7 @@
 
             <img class="cover" src="@/assets/cover2.png" alt="">
 
-            <form class="form-holder" @submit.prevent="Login">
+            <form class="form-holder" @submit.prevent="login()">
 
                 <div class="titulo">
                     <h2>INICIAR SESIÓN</h2>
@@ -60,7 +60,7 @@ export default {
             comentarios: ''
         });
 
-        const Login = () => {
+        function login() {
             firebase
                 .auth()
                 .signInWithEmailAndPassword(state.correo, state.password)
@@ -78,7 +78,7 @@ export default {
 
         return {
             state,
-            Login
+            login
         }
     }
 }

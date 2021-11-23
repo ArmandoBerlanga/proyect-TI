@@ -7,7 +7,7 @@
 
             <img class="cover" src="@/assets/cover1.png" alt="">
 
-            <form class="form-holder" @submit.prevent="Registro">
+            <form class="form-holder" @submit.prevent="registro()">
 
                 <div class="titulo">
                     <h2>REGÍSTRATE YA</h2>
@@ -85,7 +85,7 @@ export default {
             comentarios: '',
         });
 
-        const Registro = () => {
+        function registro() {
             firebase
                 .auth()
                 .createUserWithEmailAndPassword(state.correo,state.password)
@@ -107,7 +107,7 @@ export default {
 
         return {
             state,
-            Registro
+            registro
         }
     }
 }
