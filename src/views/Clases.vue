@@ -7,7 +7,7 @@
         <div class="clases">
 
             <div class="clase">
-                <img src="@/assets/clases/danza_area.png" alt="">
+                <img src="@/assets/clases/danza_area.png" alt="Chicas usando las telas">
                 <h3>Danza área</h3>
                 <p>
                     Más allá de ser estética e impresionante, la danza aérea otorga muchos beneficios a quien la practica. ¿Quieres conocerlos? ¡Aquí te los dejamos!
@@ -22,7 +22,7 @@
 
 
             <div class="clase">
-                <img src="@/assets/clases/handstand.png" alt="">
+                <img src="@/assets/clases/handstand.png" alt="Chica apoyando a otra a pararse de manos">
                 <h3>Handstand</h3>
                 <p>
                     El parado de manos es sin duda una habilidad que muchas personas quisieran tener, sin embargo ¿Conoces los beneficios de su práctica? ¡Aquí te los dejamos! 
@@ -36,7 +36,7 @@
             </div>
 
             <div v-if="state.masBeneficos" class="clase">
-                <img src="@/assets/clases/contorsion.png" alt="">
+                <img src="@/assets/clases/contorsion.png" alt="Chicas haciendo un ejercicio de contorsión">
                 <h3>Contorsión</h3>
                 <p>
                     ¿Tienes curiosidad de iniciarte en el mundo de la contorsión pero aún tienes dudas? Aquí te dejamos más motivos para intentarlo:
@@ -50,7 +50,7 @@
             </div>
 
             <div v-if="state.masBeneficos" class="clase">
-                <img src="@/assets/clases/entrenamiento_funcional.png" alt="">
+                <img src="@/assets/clases/entrenamiento_funcional.png" alt="Grupo de chicos haciendo estiramientos">
                 <h3>Entrenamiento Funcional</h3>
                 <p>
                     El entrenamiento funcional es ideal si buscas mejorar tu rendimiento en tus actividades diarias y un ejercicio personalizado para cubrir tus necesidades. Combínalo con nuestras demás clases o adáptalo al estilo de vida que más te guste.

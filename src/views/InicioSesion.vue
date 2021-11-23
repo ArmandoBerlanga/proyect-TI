@@ -5,7 +5,7 @@
 
         <div class="wrapper">
 
-            <img class="cover" src="@/assets/cover2.png" alt="">
+            <img class="cover" src="@/assets/cover2.png" alt="Chica apoyando a otra a pararse de manos">
 
             <form class="form-holder" @submit.prevent="login()">
 
@@ -16,14 +16,14 @@
 
                 <div class="datos correo">
                     <div class="cuadro">
-                        <img src="@/assets/svg/email.svg" alt="">
+                        <img src="@/assets/svg/email.svg" alt="Icono de usuario">
                     </div>
                     <input type="email" name="correo" placeholder="Correo" v-model="state.correo" required />
                 </div>
 
                 <div class="datos password">
                     <div class="cuadro">
-                        <img src="@/assets/svg/password.svg" alt="">
+                        <img src="@/assets/svg/password.svg" alt="Icono de contraseña">
                     </div>
                     <input type="password" name="password" placeholder="Contraseña" v-model="state.password" required />
                 </div>

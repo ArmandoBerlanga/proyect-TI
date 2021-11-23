@@ -1,10 +1,10 @@
 <template>
 <div id="aboutus">
-    <h2>UN POCO DE NOSOTROS</h2>
+    <h2>SOBRE NOSOTROS</h2>
 
     <section class="presentacion">
 
-        <img src="@/assets/aboutus/aboutus.jpg" alt="imagen de maestra dando clase">
+        <img src="@/assets/aboutus/aboutus.jpg" alt="Imagen de maestra dando clase">
 
         <p class="contenido">
             En Indigo Circus Academy estamos comprometidos a la motivación y superación personal de cada uno de nuestros alumnos, te invitamos a empujar tus límites y hacer más de lo que creías posible!

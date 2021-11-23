@@ -1,7 +1,7 @@
 <template>
 <div id="home">
     <div class="landing">
-        <img src="@/assets/banner.png" class="banner" alt="banner cada día es una opurtunidad de ser tu mejor versión" />
+        <img src="@/assets/banner.png" class="banner" alt="banner con el texto de Cada día es una opurtunidad de ser tu mejor versión" />
 
         <a href="#forms">
             <button v-if="!sesionActiva" class="cta">¡EMPIEZA HOY!</button>

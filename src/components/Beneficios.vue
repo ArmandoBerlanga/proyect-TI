@@ -7,7 +7,7 @@
         <div class="clases">
 
             <div class="clase">
-                <img src="@/assets/beneficios/beneficio1.png" alt="">
+                <img src="@/assets/beneficios/beneficio1.png" alt="Chicas haciendo una figura">
                 <h3>Convive</h3>
                 <p>
                     Estarás rodeado de personas energéticas y activas como tú.
@@ -15,7 +15,7 @@
             </div>
 
             <div class="clase">
-                <img src="@/assets/beneficios/beneficio2.png" alt="">
+                <img src="@/assets/beneficios/beneficio2.png" alt="Chica haciendo una figura en una tela">
                 <h3>Aprende</h3>
                 <p>
                     Aprenderás habilidades que no se aprenden en ningún otro lado.
@@ -23,7 +23,7 @@
             </div>
 
             <div class="clase">
-                <img src="@/assets/beneficios/beneficio3.png" alt="">
+                <img src="@/assets/beneficios/beneficio3.png" alt="Chicos haciendo una figura de gimnasia">
                 <h3>Atrévete</h3>
                 <p>
                     Toma el reto de aprende una habilidad única y diferente.
@@ -31,7 +31,7 @@
             </div>
 
             <div class="clase">
-                <img src="@/assets/beneficios/beneficio4.png" alt="">
+                <img src="@/assets/beneficios/beneficio4.png" alt="Chicas paradas de manos">
                 <h3>Únete a la gran famila Índigo Circus</h3>
                 <p>
                     Somos una comunidad unida que busca divertirse a través de la expresión de este bello arte.

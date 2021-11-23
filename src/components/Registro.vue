@@ -5,7 +5,7 @@
 
         <div class="wrapper">
 
-            <img class="cover" src="@/assets/cover1.png" alt="">
+            <img class="cover" src="@/assets/cover1.png" alt="Equipo de chicas haciendo una figura">
 
             <form class="form-holder" @submit.prevent="registro()">
 
@@ -16,42 +16,42 @@
 
                 <div class="datos nombres">
                     <div class="cuadro">
-                        <img src="@/assets/svg/account.svg" alt="">
+                        <img src="@/assets/svg/account.svg" alt="Icono de usuario">
                     </div>
                     <input type="text" name="nombre" placeholder="Nombre(s)" v-model="state.nombre" required />
                 </div>
 
                 <div class="datos apellidos">
                     <div class="cuadro">
-                        <img src="@/assets/svg/account.svg" alt="">
+                        <img src="@/assets/svg/account.svg" alt="Icono de usuario">
                     </div>
                     <input type="text" name="apellido" placeholder="Apelllido(s)" v-model="state.apellido" required />
                 </div>
 
                 <div class="datos telefono">
                     <div class="cuadro">
-                        <img src="@/assets/svg/phone.svg" alt="">
+                        <img src="@/assets/svg/phone.svg" alt="Icono de teléfono">
                     </div>
                     <input type="number" name="telefono" placeholder="Teléfono" v-model="state.telefono" required />
                 </div>
 
                 <div class="datos correo">
                     <div class="cuadro">
-                        <img src="@/assets/svg/email.svg" alt="">
+                        <img src="@/assets/svg/email.svg" alt="Icono de correo">
                     </div>
                     <input type="email" name="correo" placeholder="Correo" v-model="state.correo" required />
                 </div>
 
                 <div class="datos password">
                     <div class="cuadro">
-                        <img src="@/assets/svg/password.svg" alt="">
+                        <img src="@/assets/svg/password.svg" alt="Icono de contraseña">
                     </div>
                     <input type="password" name="password" placeholder="Contraseña" v-model="state.password" required />
                 </div>
 
                 <div class="datos date">
                     <div class="cuadro">
-                        <img src="@/assets/svg/date.svg" alt="">
+                        <img src="@/assets/svg/date.svg" alt="Icono de cumpleaños">
                     </div>
                     <input type="date" name="edad" v-model="state.cumple" required />
                 </div>

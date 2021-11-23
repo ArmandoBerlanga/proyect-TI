@@ -2,7 +2,7 @@
 <div id="app">
 
     <nav>
-        <img src="@/assets/logo.png" alt="logo">
+        <img src="@/assets/logo.png" alt="Logo de Indigo Circus">
 
         <ul class="lista hide">
             <li>
@@ -51,13 +51,13 @@
             <div class="icons">
 
                 <a href="https://www.facebook.com/indigo.circus.academy" target="_blank">
-                    <img src="@/assets/social_media/facebook.png" alt="logo de facebook">
+                    <img src="@/assets/social_media/facebook.png" alt="Logo de Facebook">
                 </a>
                 <a href="https://www.instagram.com/indigo.circus/" target="_blank">
-                    <img src="@/assets/social_media/insta.png" alt="logo de instagram">
+                    <img src="@/assets/social_media/insta.png" alt="Logo de Instagram">
                 </a>
                 <a href="https://www.tiktok.com/@indigocircus?" target="_blank">
-                    <img src="@/assets/social_media/tiktok.png" alt="logo de tiktok">
+                    <img src="@/assets/social_media/tiktok.png" alt="Logo de TikTok">
                 </a>
 
             </div>
@@ -69,7 +69,7 @@
                 <router-link to="#">Derechos Reservados</router-link>
             </li> -->
             <li>
-                <router-link to="/nosotros">Acerca de nosotros</router-link>
+                <router-link to="/nosotros">Sobre Nosotros</router-link>
             </li>
             <li>
                 <router-link to="/politicas_privacidad">Politica de Privacidad</router-link>

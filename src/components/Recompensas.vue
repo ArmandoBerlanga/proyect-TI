@@ -7,7 +7,7 @@
         <div class="clases">
 
             <div class="clase">
-                <img src="@/assets/recompensas/recompensa1.png" alt="">
+                <img src="@/assets/recompensas/recompensa1.png" alt="Chica haciendo una figura de telas">
                 <h3>Clase Gratis</h3>
                 <p>
                    Lleva un comprobante de tu registro y tu primera clase será gratis.
@@ -15,7 +15,7 @@
             </div>
 
             <div class="clase">
-                <img src="@/assets/recompensas/recompensa2.png" alt="">
+                <img src="@/assets/recompensas/recompensa2.png" alt="Chica haciendo el arco">
                 <h3>Gimnasio</h3>
                 <p>
                     Ahora como miembro, tendrás acceso ilimitado a nuestra serie de videos de práctica.
@@ -23,7 +23,7 @@
             </div>
 
             <div class="clase">
-                <img src="@/assets/recompensas/recompensa3.png" alt="">
+                <img src="@/assets/recompensas/recompensa3.png" alt="Chico haciendo un ejercicio de abdomen">
                 <h3>Promociones</h3>
                 <p>
                     En tu correo recibirás promociones para las distintas clases.
@@ -31,7 +31,7 @@
             </div>
 
             <div class="clase">
-                <img src="@/assets/recompensas/recompensa4.png" alt="">
+                <img src="@/assets/recompensas/recompensa4.png" alt="Chico usando el trapecio">
                 <h3>Descuento</h3>
                 <p>
                     Ahora tendrás acceso a descuentos en distintas tiendas deportivas.
