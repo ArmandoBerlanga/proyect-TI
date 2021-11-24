@@ -24,11 +24,9 @@
                 <router-link to="/" @click="logout()">CERRAR SESIÓN</router-link>
             </li>
             <li v-if="!state.sesionActiva">
-                
                 <a href="/#forms">
                     <button class="secundario">REGÍSTRATE</button>
                 </a>
-                
             </li>
         </ul>
 

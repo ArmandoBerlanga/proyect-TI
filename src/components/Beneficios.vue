@@ -2,7 +2,7 @@
 <div id="beneficios">
     <section class="sec-clases">
 
-        <h2>RECOMPENSAS</h2>
+        <h2>BENEFICIOS</h2>
 
         <div class="clases">
 
