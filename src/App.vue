@@ -96,11 +96,10 @@ export default {
     },
     setup() {
 
-        document.title = "Landing Indigo";
+        document.title = "Indigo Circus Academy";
 
         const state = reactive({
-            sesionActiva: localStorage.getItem("sesionActiva"),
-            usuario: '',
+            sesionActiva: localStorage.getItem("sesionActiva")
         });
 
         function logout() {

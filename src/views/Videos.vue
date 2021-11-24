@@ -57,6 +57,9 @@ import { reactive } from '@vue/reactivity'
 export default {
     name: 'Videos',
     setup() {
+
+        document.title = "Videos";
+
         const state = reactive({
             masBeneficos: false
         });

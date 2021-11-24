@@ -70,6 +70,9 @@ import { reactive } from '@vue/reactivity'
 export default {
     name: 'Clases',
     setup() {
+
+        document.title = "Clases";
+
         const state = reactive({
             masBeneficos: false
         });

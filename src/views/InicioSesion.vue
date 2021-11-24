@@ -47,15 +47,17 @@ import { auth } from '@/firebase.js';
 
 export default {
     name: "IniciaSesion",
-    setup(props, context) {
+    setup(props,context) {
+
+        document.title = "Iniciar Sesión";
+
         const state = reactive({
             nombre: '',
             apellido: '',
             telefono: '',
             correo: '',
             password: '',
-            cumple: '',
-            comentarios: ''
+            cumple: ''
         });
 
 

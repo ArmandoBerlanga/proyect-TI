@@ -1,12 +1,12 @@
 <template>
-<div id="promociones">
-    <section class="sec-clases">
+<div id="recompensas">
+    <section class="sec-recompensas">
 
         <h2>RECOMPENSAS</h2>
 
-        <div class="clases">
+        <div class="recompensas">
 
-            <div class="clase">
+            <div class="recompensa">
                 <img src="@/assets/recompensas/recompensa1.png" alt="Chica haciendo una figura de telas">
                 <h3>Clase Gratis</h3>
                 <p>
@@ -14,7 +14,7 @@
                 </p>
             </div>
 
-            <div class="clase">
+            <div class="recompensa">
                 <img src="@/assets/recompensas/recompensa2.png" alt="Chica haciendo el arco">
                 <h3>Gimnasio</h3>
                 <p>
@@ -22,7 +22,7 @@
                 </p>
             </div>
 
-            <div class="clase">
+            <div class="recompensa">
                 <img src="@/assets/recompensas/recompensa3.png" alt="Chico haciendo un ejercicio de abdomen">
                 <h3>Promociones</h3>
                 <p>
@@ -30,7 +30,7 @@
                 </p>
             </div>
 
-            <div class="clase">
+            <div class="recompensa">
                 <img src="@/assets/recompensas/recompensa4.png" alt="Chico usando el trapecio">
                 <h3>Descuento</h3>
                 <p>
@@ -48,7 +48,7 @@
 <script>
 import { reactive } from '@vue/reactivity'
 export default {
-    name: 'Promociones',
+    name: 'Recompensas',
     setup() {
         const state = reactive({
         });
@@ -66,14 +66,14 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/__variables.scss';
 
-.sec-clases {
-    .clases {
+.sec-recompensas {
+    .recompensas {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0.7rem;
         margin-top: 0.7rem;
 
-        .clase {
+        .recompensa {
             display: flex;
             flex-flow: column nowrap;
             gap: 0.35rem;
@@ -117,19 +117,19 @@ export default {
 }
 
 @media screen and (max-width: 1000px) {
-    .sec-clases .clases {
+    .sec-recompensas .recompensas {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 890px) {
-    .sec-clases .clases {
+    .sec-recompensas .recompensas {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .sec-clases .clases {
+    .sec-recompensas .recompensas {
         grid-template-columns: 1fr;
     }
 }

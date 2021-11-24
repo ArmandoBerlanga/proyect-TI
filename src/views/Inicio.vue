@@ -48,12 +48,11 @@
 </template>
 
 <script>
-import { reactive } from '@vue/reactivity'
 import Registro from '@/components/Registro.vue'
 import Beneficios from '@/components/Beneficios.vue'
 import Recompensas from '@/components/Recompensas.vue'
-import { ref } from 'vue';
 import Popup from '@/components/Popup.vue'
+import { ref } from 'vue';
 
 export default {
     name: 'Inicio',
@@ -67,9 +66,9 @@ export default {
         sesionActiva: String
     },
     setup() {
-        const state = reactive({
-        });
-       
+        
+        document.title = "Indigo Circus Academy";
+
         const popupTriggers = ref({
 			timedTrigger: false
 		});
@@ -83,7 +82,6 @@ export default {
 		}, 500);
 
         return {
-            state,
             TogglePopup,
             popupTriggers
         }

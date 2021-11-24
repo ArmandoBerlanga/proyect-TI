@@ -1,12 +1,12 @@
 <template>
 <div id="beneficios">
-    <section class="sec-clases">
+    <section class="sec-beneficios">
 
         <h2>BENEFICIOS</h2>
 
-        <div class="clases">
+        <div class="beneficios">
 
-            <div class="clase">
+            <div class="beneficio">
                 <img src="@/assets/beneficios/beneficio1.png" alt="Chicas haciendo una figura">
                 <h3>Convive</h3>
                 <p>
@@ -14,7 +14,7 @@
                 </p>
             </div>
 
-            <div class="clase">
+            <div class="beneficio">
                 <img src="@/assets/beneficios/beneficio2.png" alt="Chica haciendo una figura en una tela">
                 <h3>Aprende</h3>
                 <p>
@@ -22,7 +22,7 @@
                 </p>
             </div>
 
-            <div class="clase">
+            <div class="beneficio">
                 <img src="@/assets/beneficios/beneficio3.png" alt="Chicos haciendo una figura de gimnasia">
                 <h3>Atrévete</h3>
                 <p>
@@ -30,7 +30,7 @@
                 </p>
             </div>
 
-            <div class="clase">
+            <div class="beneficio">
                 <img src="@/assets/beneficios/beneficio4.png" alt="Chicas paradas de manos">
                 <h3>Únete a la gran famila Índigo Circus</h3>
                 <p>
@@ -48,7 +48,7 @@
 <script>
 import { reactive } from '@vue/reactivity'
 export default {
-    name: 'Recompensas',
+    name: 'Beneficios',
     setup() {
         const state = reactive({
         });
@@ -66,14 +66,14 @@ export default {
 <style lang="scss" scoped>
 @import '@/styles/__variables.scss';
 
-.sec-clases {
-    .clases {
+.sec-beneficios {
+    .beneficios {
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 0.7rem;
         margin-top: 0.7rem;
 
-        .clase {
+        .beneficio {
             display: flex;
             flex-flow: column nowrap;
             gap: 0.35rem;
@@ -117,19 +117,19 @@ export default {
 }
 
 @media screen and (max-width: 1000px) {
-    .sec-clases .clases {
+    .sec-beneficios .beneficios {
         grid-template-columns: 1fr 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 890px) {
-    .sec-clases .clases {
+    .sec-beneficios .beneficios {
         grid-template-columns: 1fr 1fr;
     }
 }
 
 @media screen and (max-width: 500px) {
-    .sec-clases .clases {
+    .sec-beneficios .beneficios {
         grid-template-columns: 1fr;
     }
 }

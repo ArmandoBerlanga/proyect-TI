@@ -70,7 +70,12 @@
 
 <script>
 export default {
+    name: 'Maestros',
+    setup() {
 
+        document.title = "Maestros";
+
+    }
 }
 </script>
 
@@ -120,8 +125,8 @@ export default {
 
             img {
                 border-radius: 50%;
-                height: 17rem;
-                width: 17rem;
+                height: 15rem;
+                width: 15rem;
                 object-fit: cover;
             }
 
